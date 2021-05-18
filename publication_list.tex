@@ -1,0 +1,52 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.9in]{geometry}
+
+\usepackage[resetlabels]{multibib}
+\newcites{Working}{Working}
+\newcites{SCI}{SCI}
+\newcites{EIJA}{EI Journal}
+\newcites{EICA}{EI Conference}
+\newcites{ChineseCore}{Chinese}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\begin{document}
+\begin{center}
+    \textbf{PUBLICATIONS LIST}
+\end{center}
+%%%%% Journals %%%%%
+% 2021
+\nociteSCI{ren:2021backsteppingReview,ren:20216DOFIdentification,ren:2021OWT_O&M_review,ren:2020complexShapedPayloadLifting,ren:2020seaStateEst,ren:2020preassemblyHydraulic,han:2020adaptive,ZhuMan:2021modelIdentificationhan:2021ukf,amrit:2021LEE_energies,zhou:2020pathPlanning,ZhuMan:2021modelIdentification}
+% 2020
+\nociteSCI{ren:2020finiteTimeNNAdapticeCtrl,ren:2020IJOPE,verma:2020LEE_WE,verma:2020misalignment,verma:2020OMAE_resubmit,ming2019typeCTank,roger:2020TAPM_review}
+% 2019
+\nociteSCI{ren:2019bladeLift,ren:2019monopilePosition,verma:2019response,verma:2019impact,ming:2019iceOWT}
+% 2018
+\nociteSCI{ren:2018singleBladeInstallation,ren:2018highFidelityModel,xu:2018journalOMAE}
+% 2017
+\nociteSCI{jiang:2017parametric,jiang:2017review}
+% Early
+\nociteSCI{liang:2013generalized}
+
+%%%%% Conference paper %%%%%
+% 2020
+\nociteEICA{verma:2020leadingEdge,zhiyu:2020damageIdentification}
+% 2019
+\nociteEICA{verma:2019OMAE}
+% 2018
+\nociteEICA{jin:2018installation,gao:2018probabilistic,ren:singleBladeInstallation3Lines,jiang:2018catamaranMating}
+% 2017
+\nociteEICA{ren:2017modeling,xu:2017}
+\nociteEICA{ren:2016site,ren:2016tension,ren:2015tension,ren:2015supervisory}
+
+\vspace*{0.5em}
+\textbf{Journal papers}
+\bibliographystyleSCI{unsrt}{}
+\bibliographySCI{Quarterly_EN,bibtex_of_my_paper}
+
+\vspace*{0.5em}
+\textbf{Conference papers}
+\bibliographystyleEICA{unsrt}
+\bibliographyEICA{bibtex_of_my_paper}
+
+\end{document}
